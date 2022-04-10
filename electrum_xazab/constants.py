@@ -57,7 +57,7 @@ def read_json_gz(filename, default):
     return r
 
 
-GIT_REPO_URL = "https://github.com/xazabevo/electrum-xazab"
+GIT_REPO_URL = "https://github.com/MichaelHDesigns/electrum-xazab"
 GIT_REPO_ISSUES_URL = f"{GIT_REPO_URL}/issues"
 BIP39_WALLET_FORMATS = read_json('bip39_wallet_formats.json', [])
 
@@ -79,10 +79,10 @@ class AbstractNet:
 class BitcoinMainnet(AbstractNet):
 
     TESTNET = False
-    WIF_PREFIX = 204
-    ADDRTYPE_P2PKH = 76
-    ADDRTYPE_P2SH = 16
-    GENESIS = "00000ffd590b1485b3caadc19b22e6379c733355108f107a430458cdf3407ab6"
+    WIF_PREFIX = 228
+    ADDRTYPE_P2PKH = 100
+    ADDRTYPE_P2SH = 40
+    GENESIS = "37540c3c757bb77e42c168d8197447b6aba38c2d1ec0ddf59d2e774c41953093"
     DEFAULT_PORTS = {'t': '50010', 's': '50020'}
     DEFAULT_SERVERS = read_json('servers.json', {})
     CHECKPOINTS = read_json_gz('checkpoints.json.gz', [])
@@ -97,8 +97,8 @@ class BitcoinMainnet(AbstractNet):
     XPUB_HEADERS_INV = inv_dict(XPUB_HEADERS)
     DRKV_HEADER = 0x02fe52f8  # drkv
     DRKP_HEADER = 0x02fe52cc  # drkp
-    BIP44_COIN_TYPE = 988
-    DIP3_ACTIVATION_HEIGHT = 20
+    BIP44_COIN_TYPE = 231
+    DIP3_ACTIVATION_HEIGHT = 5
 
 
 class BitcoinTestnet(AbstractNet):
