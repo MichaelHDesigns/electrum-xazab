@@ -9,7 +9,7 @@ os.chdir(os.path.join('..', 'electrum_xazab'))
 # Get fresh translations
 clonetmp = tempfile.mkdtemp()
 os.system("git clone "
-          "https://github.com/xazabevo/electrum-xazab-locale "
+          "https://github.com/MichaelHDesigns/electrum-xazab-locale "
           "%s" % clonetmp)
 os.system("rm -rf ./locale")
 os.system("mv %s/locale ." % clonetmp)
