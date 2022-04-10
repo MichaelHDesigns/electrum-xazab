@@ -182,11 +182,15 @@ class XazabNet(Logger):
             self.dns_seeds = ['testnet-seed.xazabdot.io',
                               'test.dnsseed.masternode.io']
         else:
-            self.default_port = 30303
-            self.start_str = b'\x55\x46\x58\x50'
-            self.spork_address = 'XnGqZfBZ9TGmDykH12Ryb2u763Ydto4RiP'
-            self.dns_seeds = ['dnsseed.xazab.xyz',
-                              'dnsseed2.xazab.xyz']
+            self.default_port = 65000
+            self.start_str = b'\xee\xae\xea\xcc'
+            self.spork_address = 'hWrjjP7w4iE5tezxDG3jD7xCTmikw3Kgoy'
+            self.dns_seeds = ['73.150.182.108',
+                              '155.138.198.71',
+                              '67.166.253.246',
+                              '82.27.145.78',
+                              '80.211.84.246',
+                              '62.171.128.133']
         self.network = network
         self.proxy = None
         self.loop = network.asyncio_loop
