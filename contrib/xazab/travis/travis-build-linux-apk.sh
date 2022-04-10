@@ -8,7 +8,7 @@ fi
 
 cd build
 if [[ -n $TRAVIS_TAG ]]; then
-    BUILD_REPO_URL=https://github.com/xazabevo/electrum-xazab.git
+    BUILD_REPO_URL=https://github.com/MichaelHDesigns/electrum-xazab.git
     git clone --branch $TRAVIS_TAG $BUILD_REPO_URL electrum-xazab
 else
     git clone .. electrum-xazab
